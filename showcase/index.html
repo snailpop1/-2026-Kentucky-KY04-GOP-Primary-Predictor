@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KY-04 Republican Primary Forecast</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+      --ink: #17202a;
+      --muted: #5d6673;
+      --line: #d9dee7;
+      --blue: #1f5a8a;
+      --red: #9f2b2b;
+      --paper: #f7f8fa;
+      --white: #fff;
+    }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    header { padding: 28px 36px 18px; background: var(--white); border-bottom: 1px solid var(--line); }
+    main { padding: 24px 36px 40px; max-width: 1120px; }
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+    h2 { font-size: 17px; margin: 26px 0 10px; }
+    .muted { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .metric { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    .value { font-size: 26px; font-weight: 700; margin-top: 6px; }
+    table { border-collapse: collapse; width: 100%; background: var(--white); border: 1px solid var(--line); }
+    th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    th { background: #eef1f5; }
+    .note { max-width: 850px; line-height: 1.5; }
+    @media (max-width: 760px) {
+      header, main { padding-left: 18px; padding-right: 18px; }
+      .grid { grid-template-columns: 1fr; }
+      table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KY-04 Republican Primary Forecast</h1>
+    <div class="muted">Pre-election fair odds as of 2026-05-19. Official vote totals are excluded.</div>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="metric"><div class="label">Ed Gallrein Fair Odds</div><div class="value">58.9%</div></div>
+      <div class="metric"><div class="label">Thomas Massie Fair Odds</div><div class="value">41.1%</div></div>
+      <div class="metric"><div class="label">Mean Massie Margin</div><div class="value">-2.6</div></div>
+    </section>
+    <p class="note muted">This is an auditable pre-result ensemble, not financial advice. Markets are included only as a bounded component, while source conflicts and turnout uncertainty keep the forecast deliberately uncertain.</p>
+    <h2>Component Forecast</h2>
+    <table><thead><tr><th>Component</th><th>Gallrein</th><th>Massie</th><th>Massie Margin</th><th>Weight</th></tr></thead><tbody><tr><td>direct_poll_model</td><td>67.2%</td><td>32.8%</td><td>-4.2</td><td>50.0%</td></tr>
+<tr><td>aggregator_anchor</td><td>54.9%</td><td>45.1%</td><td>-1.2</td><td>15.0%</td></tr>
+<tr><td>bounded_market_model</td><td>59.1%</td><td>40.9%</td><td>-1.9</td><td>20.0%</td></tr>
+<tr><td>fundamentals_turnout_model</td><td>48.6%</td><td>51.4%</td><td>0.4</td><td>15.0%</td></tr></tbody></table>
+    <h2>Scenarios</h2>
+    <table><thead><tr><th>Scenario</th><th>Gallrein</th><th>Massie</th><th>Massie Margin</th></tr></thead><tbody><tr><td>polling_only</td><td>67.2%</td><td>32.8%</td><td>-4.2</td></tr>
+<tr><td>aggregator_anchor</td><td>54.9%</td><td>45.1%</td><td>-1.2</td></tr>
+<tr><td>market_only</td><td>59.1%</td><td>40.9%</td><td>-1.9</td></tr>
+<tr><td>fundamentals_turnout</td><td>48.6%</td><td>51.4%</td><td>0.4</td></tr>
+<tr><td>full_model_mid_turnout</td><td>58.9%</td><td>41.1%</td><td>-2.6</td></tr>
+<tr><td>older_high_propensity_turnout</td><td>64.6%</td><td>35.4%</td><td>-4.6</td></tr>
+<tr><td>younger_lower_propensity_turnout</td><td>51.9%</td><td>48.1%</td><td>-0.6</td></tr>
+<tr><td>massie_poll_error</td><td>42.5%</td><td>57.5%</td><td>2.4</td></tr>
+<tr><td>gallrein_poll_error</td><td>72.4%</td><td>27.6%</td><td>-7.6</td></tr></tbody></table>
+    <h2>Market Comparison</h2>
+    <table><thead><tr><th>Platform</th><th>Market Gallrein</th><th>Fair Gallrein</th><th>Gallrein Edge Pts</th></tr></thead><tbody><tr><td>Polymarket</td><td>60.7%</td><td>58.9%</td><td>-1.8</td></tr>
+<tr><td>Kalshi</td><td>48.0%</td><td>58.9%</td><td>10.8</td></tr>
+<tr><td>Kalshi</td><td>63.0%</td><td>58.9%</td><td>-4.1</td></tr></tbody></table>
+    <h2>Quality Gates</h2>
+    <table><thead><tr><th>Signal</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td>polls</td><td>usable</td><td>Late public polls exist but disagree materially.</td></tr>
+<tr><td>official_results</td><td>excluded_pre_close</td><td>Official live-results page was checked pre-close; no vote totals are used in forecast.</td></tr>
+<tr><td>market_prices</td><td>bounded_ensemble_component</td><td>Markets are included with caps, normalization, and settlement/liquidity checks.</td></tr>
+<tr><td>poll_aggregators</td><td>correlated_anchor</td><td>Aggregator averages are used once and visible components are retained as deduplication evidence.</td></tr>
+<tr><td>finance_ads</td><td>capped_context</td><td>Extraordinary spending is capped because late polls already reflect much of it.</td></tr>
+<tr><td>forecast</td><td>guarded_medium_reliability</td><td>Ensemble uses more signals, but conflict penalties keep uncertainty wide.</td></tr></tbody></table>
+  </main>
+</body>
+</html>
