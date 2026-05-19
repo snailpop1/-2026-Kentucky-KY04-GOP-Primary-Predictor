@@ -1,0 +1,4 @@
+component,massie_margin_adjustment_points,notes,last_updated
+incumbency_local_network,1.1,Capped incumbency and local-network adjustment for a long-tenured district incumbent.,2026-05-19
+outside_spending,-0.28800000000000014,Capped adjustment from pro-Gallrein vs pro-Massie outside spending; negative helps Gallrein.,2026-05-19
+endorsement_event_net,-0.6000000000000001,Capped net endorsement/event score; negative helps Gallrein.,2026-05-19
