@@ -1,0 +1,4 @@
+platform,timestamp,value_flag,decision_eligible,required_edge_points,massie_edge_points,gallrein_edge_points,block_reasons,notes,last_updated
+Polymarket,2026-05-19T15:59:07-04:00,no_bet_zone,False,9.0,1.7892595964741909,-1.7892595964741909,guarded_medium_reliability;pre_close_uncertainty;fair_odds_only_policy,Fair-odds comparison only; no stake sizing or unconditional bet recommendation.,2026-05-19
+Kalshi,2026-05-13,gallrein_value,False,9.0,-10.828895235179587,10.828895235179592,guarded_medium_reliability;pre_close_uncertainty;fair_odds_only_policy,Fair-odds comparison only; no stake sizing or unconditional bet recommendation.,2026-05-19
+Kalshi,2026-05-18,no_bet_zone,False,9.0,4.131889078545909,-4.131889078545903,guarded_medium_reliability;pre_close_uncertainty;fair_odds_only_policy,Fair-odds comparison only; no stake sizing or unconditional bet recommendation.,2026-05-19
