@@ -1,0 +1,8 @@
+source,signal_date,metric,value,unit,source_url,notes
+Kentucky Chamber/SOS,2026-05-19,primary_type,closed_primary,text,https://www.kychamber.com/vote,"Kentucky primary participation is party-registration based; model assumes GOP primary electorate only."
+Kentucky Chamber/SOS,2026-05-19,poll_close_time,18:00,local_time,https://www.kychamber.com/vote,"Election-day voting hours are 6 a.m. to 6 p.m. local time."
+Kentucky Chamber/SOS,2026-05-14,no_excuse_absentee_start,2026-05-14,date,https://www.kychamber.com/vote,"No-excuse in-person absentee voting ran May 14-16."
+Kentucky official live results,2026-05-19T15:03:35-04:00,ky04_gop_results_status,zero_votes_pre_close,text,https://vrsws.sos.ky.gov/liveresults/?autorefresh=true,"Official live-results page showed Thomas MASSIE and Ed GALLREIN with zero votes and 0 counties finished at 3:03 p.m. EDT; not used as vote input."
+KFVS/AP,2026-05-19,statewide_early_ballots,185000,votes,https://www.kfvs12.com/2026/05/19/heartland-votes-2026-kentucky-primary-election/,"Public report said nearly 185,000 ballots were cast early statewide; not district-party specific."
+Big Data Poll,2026-05-15,early_vote_preference_massie,57.6,pct,https://www.bigdatapoll.com/blog/initial-results-for-kentucky-house-district-4-republican-primary-tracking-poll/,"Big Data Poll reported Massie leading among planned early no-excuse voters."
+Big Data Poll,2026-05-15,election_day_preference_gallrein,52.3,pct,https://www.bigdatapoll.com/blog/initial-results-for-kentucky-house-district-4-republican-primary-tracking-poll/,"Big Data Poll reported Gallrein leading among planned in-person Election Day voters."
