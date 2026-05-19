@@ -1,0 +1,14 @@
+dataset_name,trust_tier,freshness_sla_days,latest_source_date,days_stale,freshness_pass,source_url,notes,last_updated
+polls,high,1,2026-05-19,0.0,True,https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/,Core poll input for the KY-04 forecast.,2026-05-19
+markets,medium,1,2026-05-19,0.0,True,https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner,Bounded market forecast component and headline market comparison.,2026-05-19
+market_timeseries,medium,1,2026-05-19,0.0,True,https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner,Orderbook data used for bounded market component and no-bet buffer.,2026-05-19
+finance_ads,medium,7,2026-05-18,1.0,True,https://linknky.com/elections/2026/05/18/massie-gallrein-gop-primary-becomes-most-expensive-in-u.s-history/,Capped contextual money signal.,2026-05-19
+endorsements_events,medium,3,2026-05-18,1.0,True,https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/,Capped contextual event signal.,2026-05-19
+turnout_signals,high,1,2026-05-19,0.0,True,https://www.kychamber.com/vote,Closed-primary and turnout scenario evidence.,2026-05-19
+pollster_ratings,medium,30,,,True,https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/,Explicit pollster reliability multipliers for the polling average.,2026-05-19
+source_checks,high,1,2026-05-19,0.0,True,https://vrsws.sos.ky.gov/liveresults/?autorefresh=true,Freshness and audit metadata.,2026-05-19
+wager_settings,high,365,,,True,local,Fair-odds comparison settings.,2026-05-19
+poll_aggregators,medium,1,2026-05-19,0.0,True,https://www.publicsentimentinstitute.com/polling,Correlated polling anchor and deduplication evidence.,2026-05-19
+turnout_history,high,1,2026-05-19,0.0,True,https://www.kychamber.com/vote,Turnout structure and uncertainty inputs.,2026-05-19
+district_baselines,medium,7,2026-05-19,0.0,True,https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/,Fundamentals prior inputs.,2026-05-19
+source_conflicts,high,1,2026-05-19,0.0,True,local,Explicit source conflict and double-counting guardrails.,2026-05-19
