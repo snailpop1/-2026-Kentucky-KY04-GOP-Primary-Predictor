@@ -1,0 +1,5 @@
+conflict_id,signal_date,conflict_type,affected_dataset,severity,source_quality,source_url,notes
+pollster_dispersion,2026-05-19,poll_margin_disagreement,polls,medium,model_diagnostic,local,"Late core polls range from a small Massie lead to high-single-digit Gallrein leads."
+aggregator_direct_mismatch,2026-05-19,topline_or_sample_mismatch,poll_aggregators,medium,aggregator_check,https://www.publicsentimentinstitute.com/polling,"PSI visible component rows differ from some direct-source rows and should not be double-counted."
+official_results_excluded,2026-05-19,pre_result_guardrail,turnout_signals,high,official_check,https://vrsws.sos.ky.gov/liveresults/?autorefresh=true,"Official results page may exist, but reported votes are excluded in pre-election mode."
+market_settlement_basis,2026-05-19,market_resolution_basis,market_timeseries,low,market_metadata,https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner,"Polymarket resolves by official Republican-source consensus rather than directly from the state live-results page."
