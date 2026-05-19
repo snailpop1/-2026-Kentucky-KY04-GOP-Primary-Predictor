@@ -1,0 +1,11 @@
+signal_group,status,metric,value,notes,last_updated
+polls,usable,core_poll_rows,4.0,Late public polls exist but disagree materially.,2026-05-19
+official_results,excluded_pre_close,pre_close_vote_rows,0.0,Official live-results page was checked pre-close; no vote totals are used in forecast.,2026-05-19
+market_prices,bounded_ensemble_component,market_rows,3.0,"Markets are included with caps, normalization, and settlement/liquidity checks.",2026-05-19
+poll_aggregators,correlated_anchor,active_aggregator_rows,1.0,Aggregator averages are used once and visible components are retained as deduplication evidence.,2026-05-19
+finance_ads,capped_context,rows,5.0,Extraordinary spending is capped because late polls already reflect much of it.,2026-05-19
+endorsement_inventory,auditable_inventory,public_endorsement_rows,8.0,"Formal endorsements, surrogates, and issue-group recommendations are tracked separately from the narrower modeled event file.",2026-05-19
+demographic_crosstabs,diagnostic_only,rows_with_electorate_share,9.0,Age crosstabs explain turnout risk; they are not double-counted as independent topline polls.,2026-05-19
+historical_elections,diagnostic_only,historical_rows,10.0,"Historical Massie vote history shows incumbent baseline strength, but prior cycles are not directly weighted into this unusual 2026 primary.",2026-05-19
+registration_history,diagnostic_only,registration_snapshots,4.0,"Official KY-04 registration snapshots are used to frame contested-primary turnout range and electorate composition, not as a separate weighted forecast component.",2026-05-19
+forecast,guarded_medium_reliability,massie_fair_probability,0.4113188907854591,"Ensemble uses more signals, but conflict penalties keep uncertainty wide.",2026-05-19

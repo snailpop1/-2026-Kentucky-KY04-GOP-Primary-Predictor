@@ -1,0 +1,4 @@
+platform,timestamp,massie_implied_prob,gallrein_implied_prob,minor_other_implied_prob,liquidity_or_volume,source_url,notes
+Polymarket,2026-05-19T15:59:07-04:00,0.395,0.609,0.0010,"$2.52M event volume; $262k event liquidity",https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner,"Live Gamma API snapshot captured pre-close; market prices used only as a bounded ensemble component and fair-odds comparison."
+Kalshi,2026-05-13,0.53,0.49,0.00,,https://news.kalshi.com/p/massie-prediction-market-lead-evaporates-kentucky-primary-2026,"Kalshi news snapshot reported Massie 53 and Gallrein 49 one week before primary."
+Kalshi,2026-05-18,0.37,0.63,0.00,,https://news.kalshi.com/p/massie-odds-all-time-low-kentucky-primary,"Search-result/news snapshot reported Gallrein 63 and Massie 37 on May 18."

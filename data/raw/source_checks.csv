@@ -1,0 +1,6 @@
+dataset_name,check_date,check_result,source_url,notes
+official_results_status,2026-05-19,checked_zero_votes_pre_close,https://vrsws.sos.ky.gov/liveresults/?autorefresh=true,"Official page inspected during planning showed zero KY-04 GOP votes and binary candidate universe before polls closed."
+market_timeseries,2026-05-19,checked_current,https://gamma-api.polymarket.com/events?slug=ky-04-republican-primary-winner,"Polymarket API snapshot captured at 2026-05-19 15:18:50 EDT."
+polls,2026-05-19,checked_current,https://www.realclearpolling.com/polls/house/republican-primary/2026/kentucky/district-4,"RCP page had limited renderable table data; source baseline and aggregator records used for late poll inventory."
+poll_aggregators,2026-05-19,checked_current,https://www.publicsentimentinstitute.com/polling,"PSI page showed KY-04 GOP average Gallrein 50.3 / Massie 49.1 and visible component rows; used as one correlated polling anchor."
+market_timeseries,2026-05-19,checked_current,https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner,"Polymarket slug endpoint showed Massie 0.39/0.40 and Gallrein 0.608/0.610 near 19:58 UTC."

@@ -1,0 +1,7 @@
+event_date,candidate_affinity,event_type,weight_points,source_url,notes
+2026-03-01,Gallrein,endorsement,0.8,https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/,"President Donald Trump endorsed Gallrein and appeared with him in Boone County."
+2026-05-18,Gallrein,late_surrogate_event,0.3,https://www.kentucky.com/news/politics-government/article315799747.html,"Pete Hegseth made a final-day appearance for Gallrein in Northern Kentucky."
+2026-04-01,Massie,endorsement,0.4,https://www.predictionedge.com/elections/us-house/71fe4418fd7e4565bd812414cad3ef98/,"Rand Paul endorsed Massie; treated as a local/liberty-network support signal."
+2026-05-13,Gallrein,endorsement,0.2,https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/,"Andy Barr endorsed Gallrein; treated as a small elite-party signal."
+2026-02-05,Gallrein,endorsement,0.1,https://www.kentucky.com/news/politics-government/article314591068.html,"Nate Morris endorsed Gallrein shortly after Barr; treated as a small statewide MAGA-alignment signal."
+2026-05-18,Massie,late_countermessaging,0.3,https://linknky.com/elections/2026/05/18/massie-gallrein-gop-primary-becomes-most-expensive-in-u-s-history/,"Massie emphasized outside spending and local independence in late messaging."

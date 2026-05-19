@@ -1,0 +1,5 @@
+summary_group,metric,value,notes,last_updated
+registration_balance,ky04_republican_registration_share_2026,51.8,"Official April 24, 2026 registration snapshot put Republicans at 311,007 of 600,319 registered voters in KY-04 (51.8%).",2026-05-19
+historical_turnout_range,recent_contested_gop_primary_turnout_rate_avg,22.46178411829546,"Recent contested KY-04 Republican primaries turned out about 22.5% of registered Republicans on average; 2020 was 28.6%, 2022 was 21.8%, and 2024 was 16.9%.",2026-05-19
+mode_split,planned_early_vs_election_day_edge,-5.300000000000004,Big Data Poll had Massie at 57.6% among planned early no-excuse voters and Gallrein at 52.3% among planned Election Day voters.,2026-05-19
+beneficiary_call,turnout_beneficiary_margin,-1.6000000000000014,"Quantus modeled the likely electorate as 63.5% age 56+ and 36.5% under 56. Older voters favored Gallrein 59.1-31.7, while younger voters favored Massie 60.7-29.1. That makes a higher-propensity older electorate Gallrein-favorable unless younger and early-vote participation beats the likely-voter mix.",2026-05-19

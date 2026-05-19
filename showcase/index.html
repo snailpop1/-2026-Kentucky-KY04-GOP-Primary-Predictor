@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KY-04 Republican Primary Forecast</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+      --ink: #17202a;
+      --muted: #5d6673;
+      --line: #d9dee7;
+      --blue: #1f5a8a;
+      --red: #9f2b2b;
+      --paper: #f7f8fa;
+      --white: #fff;
+    }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    header { padding: 28px 36px 18px; background: var(--white); border-bottom: 1px solid var(--line); }
+    main { padding: 24px 36px 40px; max-width: 1120px; }
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+    h2 { font-size: 17px; margin: 26px 0 10px; }
+    .muted { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .metric { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    .value { font-size: 26px; font-weight: 700; margin-top: 6px; }
+    table { border-collapse: collapse; width: 100%; background: var(--white); border: 1px solid var(--line); }
+    th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    th { background: #eef1f5; }
+    .note { max-width: 850px; line-height: 1.5; }
+    @media (max-width: 760px) {
+      header, main { padding-left: 18px; padding-right: 18px; }
+      .grid { grid-template-columns: 1fr; }
+      table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KY-04 Republican Primary Forecast</h1>
+    <div class="muted">Pre-election fair odds as of 2026-05-19. Official vote totals are excluded.</div>
+  </header>
+  <main>
+    <section class="grid">
+      <div class="metric"><div class="label">Ed Gallrein Fair Odds</div><div class="value">58.9%</div></div>
+      <div class="metric"><div class="label">Thomas Massie Fair Odds</div><div class="value">41.1%</div></div>
+      <div class="metric"><div class="label">Mean Massie Margin</div><div class="value">-2.6</div></div>
+    </section>
+    <p class="note muted">This is an auditable pre-result ensemble, not financial advice. Markets are included only as a bounded component, while source conflicts and turnout uncertainty keep the forecast deliberately uncertain.</p>
+    <h2>Component Forecast</h2>
+    <table><thead><tr><th>Component</th><th>Gallrein</th><th>Massie</th><th>Massie Margin</th><th>Weight</th></tr></thead><tbody><tr><td>direct_poll_model</td><td>67.2%</td><td>32.8%</td><td>-4.2</td><td>50.0%</td></tr>
+<tr><td>aggregator_anchor</td><td>54.9%</td><td>45.1%</td><td>-1.2</td><td>15.0%</td></tr>
+<tr><td>bounded_market_model</td><td>59.1%</td><td>40.9%</td><td>-1.9</td><td>20.0%</td></tr>
+<tr><td>fundamentals_turnout_model</td><td>48.6%</td><td>51.4%</td><td>0.4</td><td>15.0%</td></tr></tbody></table>
+    <h2>Scenarios</h2>
+    <table><thead><tr><th>Scenario</th><th>Gallrein</th><th>Massie</th><th>Massie Margin</th></tr></thead><tbody><tr><td>polling_only</td><td>67.2%</td><td>32.8%</td><td>-4.2</td></tr>
+<tr><td>aggregator_anchor</td><td>54.9%</td><td>45.1%</td><td>-1.2</td></tr>
+<tr><td>market_only</td><td>59.1%</td><td>40.9%</td><td>-1.9</td></tr>
+<tr><td>fundamentals_turnout</td><td>48.6%</td><td>51.4%</td><td>0.4</td></tr>
+<tr><td>full_model_mid_turnout</td><td>58.9%</td><td>41.1%</td><td>-2.6</td></tr>
+<tr><td>older_high_propensity_turnout</td><td>64.6%</td><td>35.4%</td><td>-4.6</td></tr>
+<tr><td>younger_lower_propensity_turnout</td><td>51.9%</td><td>48.1%</td><td>-0.6</td></tr>
+<tr><td>massie_poll_error</td><td>42.5%</td><td>57.5%</td><td>2.4</td></tr>
+<tr><td>gallrein_poll_error</td><td>72.4%</td><td>27.6%</td><td>-7.6</td></tr></tbody></table>
+    <h2>Market Comparison</h2>
+    <table><thead><tr><th>Platform</th><th>Market Gallrein</th><th>Fair Gallrein</th><th>Gallrein Edge Pts</th></tr></thead><tbody><tr><td>Polymarket</td><td>60.7%</td><td>58.9%</td><td>-1.8</td></tr>
+<tr><td>Kalshi</td><td>48.0%</td><td>58.9%</td><td>10.8</td></tr>
+<tr><td>Kalshi</td><td>63.0%</td><td>58.9%</td><td>-4.1</td></tr></tbody></table>
+    <h2>Age Turnout Diagnostics</h2>
+    <table><thead><tr><th>Group</th><th>Likely Electorate Share</th><th>Massie</th><th>Gallrein</th><th>Model Role</th></tr></thead><tbody><tr><td>under_56</td><td>36.5%</td><td>60.7%</td><td>29.1%</td><td>turnout_composition_diagnostic</td></tr>
+<tr><td>56_plus</td><td>63.5%</td><td>31.7%</td><td>59.1%</td><td>turnout_composition_diagnostic</td></tr></tbody></table>
+    <h2>Endorsement Inventory</h2>
+    <table><thead><tr><th>Endorser</th><th>Candidate</th><th>Scope</th><th>Kind</th><th>Modeled</th></tr></thead><tbody><tr><td>Donald Trump</td><td>Gallrein</td><td>national</td><td>formal_endorsement</td><td>yes</td></tr>
+<tr><td>Andy Barr</td><td>Gallrein</td><td>statewide_federal</td><td>formal_endorsement</td><td>yes</td></tr>
+<tr><td>Nate Morris</td><td>Gallrein</td><td>statewide_candidate</td><td>formal_endorsement</td><td>yes</td></tr>
+<tr><td>Pete Hegseth</td><td>Gallrein</td><td>national</td><td>late_surrogate_event</td><td>yes</td></tr>
+<tr><td>Rand Paul</td><td>Massie</td><td>statewide_federal</td><td>formal_endorsement</td><td>yes</td></tr>
+<tr><td>Lauren Boebert</td><td>Massie</td><td>national</td><td>campaign_support</td><td>no</td></tr>
+<tr><td>Kentucky Right to Life</td><td>Massie</td><td>statewide_issue_group</td><td>recommendation</td><td>no</td></tr>
+<tr><td>Northern Kentucky Right to Life</td><td>Massie</td><td>local_issue_group</td><td>claimed_endorsement</td><td>no</td></tr></tbody></table>
+    <h2>Historical Vote Trend</h2>
+    <table><thead><tr><th>Year</th><th>Stage</th><th>Massie Votes</th><th>Total Votes</th><th>Massie Share</th><th>Relevance</th></tr></thead><tbody><tr><td>2012</td><td>general</td><td>186,036</td><td>299,444</td><td>62.1%</td><td>medium</td></tr>
+<tr><td>2012</td><td>primary</td><td>19,689</td><td>43,919</td><td>44.8%</td><td>high</td></tr>
+<tr><td>2014</td><td>general</td><td>150,464</td><td>222,158</td><td>67.7%</td><td>medium</td></tr>
+<tr><td>2016</td><td>general</td><td>233,922</td><td>327,987</td><td>71.3%</td><td>medium</td></tr>
+<tr><td>2018</td><td>general</td><td>162,946</td><td>261,812</td><td>62.2%</td><td>medium</td></tr>
+<tr><td>2020</td><td>general</td><td>256,613</td><td>382,509</td><td>67.1%</td><td>medium</td></tr>
+<tr><td>2020</td><td>primary</td><td>68,591</td><td>84,683</td><td>81.0%</td><td>high</td></tr>
+<tr><td>2022</td><td>general</td><td>160,920</td><td>259,587</td><td>62.0%</td><td>medium</td></tr>
+<tr><td>2022</td><td>primary</td><td>50,301</td><td>66,874</td><td>75.2%</td><td>high</td></tr>
+<tr><td>2024</td><td>primary</td><td>39,929</td><td>52,593</td><td>75.9%</td><td>high</td></tr></tbody></table>
+    <h2>Turnout Environment</h2>
+    <table><thead><tr><th>Group</th><th>Metric</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>registration_balance</td><td>ky04_republican_registration_share_2026</td><td>51.8</td><td>Official April 24, 2026 registration snapshot put Republicans at 311,007 of 600,319 registered voters in KY-04 (51.8%).</td></tr>
+<tr><td>historical_turnout_range</td><td>recent_contested_gop_primary_turnout_rate_avg</td><td>22.5</td><td>Recent contested KY-04 Republican primaries turned out about 22.5% of registered Republicans on average; 2020 was 28.6%, 2022 was 21.8%, and 2024 was 16.9%.</td></tr>
+<tr><td>mode_split</td><td>planned_early_vs_election_day_edge</td><td>-5.3</td><td>Big Data Poll had Massie at 57.6% among planned early no-excuse voters and Gallrein at 52.3% among planned Election Day voters.</td></tr>
+<tr><td>beneficiary_call</td><td>turnout_beneficiary_margin</td><td>-1.6</td><td>Quantus modeled the likely electorate as 63.5% age 56+ and 36.5% under 56. Older voters favored Gallrein 59.1-31.7, while younger voters favored Massie 60.7-29.1. That makes a higher-propensity older electorate Gallrein-favorable unless younger and early-vote participation beats the likely-voter mix.</td></tr></tbody></table>
+    <h2>Quality Gates</h2>
+    <table><thead><tr><th>Signal</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td>polls</td><td>usable</td><td>Late public polls exist but disagree materially.</td></tr>
+<tr><td>official_results</td><td>excluded_pre_close</td><td>Official live-results page was checked pre-close; no vote totals are used in forecast.</td></tr>
+<tr><td>market_prices</td><td>bounded_ensemble_component</td><td>Markets are included with caps, normalization, and settlement/liquidity checks.</td></tr>
+<tr><td>poll_aggregators</td><td>correlated_anchor</td><td>Aggregator averages are used once and visible components are retained as deduplication evidence.</td></tr>
+<tr><td>finance_ads</td><td>capped_context</td><td>Extraordinary spending is capped because late polls already reflect much of it.</td></tr>
+<tr><td>endorsement_inventory</td><td>auditable_inventory</td><td>Formal endorsements, surrogates, and issue-group recommendations are tracked separately from the narrower modeled event file.</td></tr>
+<tr><td>demographic_crosstabs</td><td>diagnostic_only</td><td>Age crosstabs explain turnout risk; they are not double-counted as independent topline polls.</td></tr>
+<tr><td>historical_elections</td><td>diagnostic_only</td><td>Historical Massie vote history shows incumbent baseline strength, but prior cycles are not directly weighted into this unusual 2026 primary.</td></tr>
+<tr><td>registration_history</td><td>diagnostic_only</td><td>Official KY-04 registration snapshots are used to frame contested-primary turnout range and electorate composition, not as a separate weighted forecast component.</td></tr>
+<tr><td>forecast</td><td>guarded_medium_reliability</td><td>Ensemble uses more signals, but conflict penalties keep uncertainty wide.</td></tr></tbody></table>
+  </main>
+</body>
+</html>
