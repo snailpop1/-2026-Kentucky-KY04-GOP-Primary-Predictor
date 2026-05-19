@@ -1,0 +1,5 @@
+setting,value,notes
+required_edge_points,8.0,"Minimum edge over market before value flag can move out of no_bet_zone."
+max_probability,0.97,"Hard cap to prevent any 100% output."
+min_probability,0.03,"Hard floor to prevent any 0% output."
+politics_fee_buffer_points,1.0,"Additional buffer for fees/slippage/settlement uncertainty."
