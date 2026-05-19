@@ -1,0 +1,5 @@
+component,massie_margin_points,sigma_margin_points,model_weight,evidence_count,source_role,notes,massie_win_probability,gallrein_win_probability,last_updated
+direct_poll_model,-4.161815994116762,9.357976880151455,0.5,4,highest_weight_direct_polling,"Verified late public polls with recency, sample, pollster, source, and cluster weights.",0.3282557851794386,0.6717442148205615,2026-05-19
+aggregator_anchor,-1.2072434607645874,9.8,0.15,1,correlated_polling_anchor,PSI average is used once as a correlated anchor; visible components are not double-counted.,0.4509790710460381,0.5490209289539618,2026-05-19
+bounded_market_model,-1.9481962626394866,8.5,0.2,2,bounded_market_signal,Binary-normalized market probability transformed to a margin proxy and capped below polling weight.,0.40935690715386414,0.5906430928461359,2026-05-19
+fundamentals_turnout_model,0.4120000000000001,11.5,0.15,13,wide_prior_context,"District, campaign, and turnout priors with wide uncertainty; legacy adjustment sum was 0.212 points.",0.5142894839838853,0.4857105160161147,2026-05-19
