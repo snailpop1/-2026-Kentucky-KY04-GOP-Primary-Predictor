@@ -1,0 +1,292 @@
+{
+  "version": "1.0",
+  "as_of": "2026-05-19",
+  "run_mode": "pre_election_no_results",
+  "headline_forecast": {
+    "massie_fair_probability": 0.4113188907854591,
+    "gallrein_fair_probability": 0.588681109214541,
+    "mean_massie_margin_points": -2.5898337687009665,
+    "forecast_withheld": false
+  },
+  "component_forecast": [
+    {
+      "component": "direct_poll_model",
+      "massie_margin_points": -4.161815994116762,
+      "sigma_margin_points": 9.357976880151455,
+      "model_weight": 0.5,
+      "evidence_count": 4,
+      "source_role": "highest_weight_direct_polling",
+      "notes": "Verified late public polls with recency, sample, pollster, source, and cluster weights.",
+      "massie_win_probability": 0.3282557851794386,
+      "gallrein_win_probability": 0.6717442148205615,
+      "last_updated": "2026-05-19"
+    },
+    {
+      "component": "aggregator_anchor",
+      "massie_margin_points": -1.2072434607645874,
+      "sigma_margin_points": 9.8,
+      "model_weight": 0.15,
+      "evidence_count": 1,
+      "source_role": "correlated_polling_anchor",
+      "notes": "PSI average is used once as a correlated anchor; visible components are not double-counted.",
+      "massie_win_probability": 0.4509790710460381,
+      "gallrein_win_probability": 0.5490209289539618,
+      "last_updated": "2026-05-19"
+    },
+    {
+      "component": "bounded_market_model",
+      "massie_margin_points": -1.9481962626394866,
+      "sigma_margin_points": 8.5,
+      "model_weight": 0.2,
+      "evidence_count": 2,
+      "source_role": "bounded_market_signal",
+      "notes": "Binary-normalized market probability transformed to a margin proxy and capped below polling weight.",
+      "massie_win_probability": 0.40935690715386414,
+      "gallrein_win_probability": 0.5906430928461359,
+      "last_updated": "2026-05-19"
+    },
+    {
+      "component": "fundamentals_turnout_model",
+      "massie_margin_points": 0.4120000000000001,
+      "sigma_margin_points": 11.5,
+      "model_weight": 0.15,
+      "evidence_count": 13,
+      "source_role": "wide_prior_context",
+      "notes": "District, campaign, and turnout priors with wide uncertainty; legacy adjustment sum was 0.212 points.",
+      "massie_win_probability": 0.5142894839838853,
+      "gallrein_win_probability": 0.4857105160161147,
+      "last_updated": "2026-05-19"
+    }
+  ],
+  "ensemble_weights": {
+    "direct_poll_model": 0.5,
+    "aggregator_anchor": 0.15,
+    "bounded_market_model": 0.2,
+    "fundamentals_turnout_model": 0.15
+  },
+  "uncertainty": {
+    "margin_80pct_interval": [
+      -17.39665092399919,
+      12.216983386597255
+    ],
+    "sigma_margin_points": 11.553834930590474,
+    "reliability_class": "guarded_medium"
+  },
+  "model_health": {
+    "reliability_score": 52.713864111055244,
+    "reliability_class": "guarded_medium",
+    "official_results_used": false,
+    "candidate_universe": [
+      "Thomas Massie",
+      "Ed Gallrein"
+    ],
+    "source_conflict_count": 4
+  },
+  "confidence_diagnostics": {
+    "component_count": 4,
+    "market_component_weight": 0.2,
+    "polling_component_weight": 0.5,
+    "aggregator_component_weight": 0.15,
+    "fundamentals_component_weight": 0.15,
+    "source_conflict_sigma_penalty": 1.5499999999999998,
+    "official_results_policy": "excluded_pre_result_mode"
+  },
+  "source_conflicts": [
+    {
+      "conflict_id": "pollster_dispersion",
+      "signal_date": "2026-05-19",
+      "conflict_type": "poll_margin_disagreement",
+      "affected_dataset": "polls",
+      "severity": "medium",
+      "source_quality": "model_diagnostic",
+      "source_url": "local",
+      "notes": "Late core polls range from a small Massie lead to high-single-digit Gallrein leads."
+    },
+    {
+      "conflict_id": "aggregator_direct_mismatch",
+      "signal_date": "2026-05-19",
+      "conflict_type": "topline_or_sample_mismatch",
+      "affected_dataset": "poll_aggregators",
+      "severity": "medium",
+      "source_quality": "aggregator_check",
+      "source_url": "https://www.publicsentimentinstitute.com/polling",
+      "notes": "PSI visible component rows differ from some direct-source rows and should not be double-counted."
+    },
+    {
+      "conflict_id": "official_results_excluded",
+      "signal_date": "2026-05-19",
+      "conflict_type": "pre_result_guardrail",
+      "affected_dataset": "turnout_signals",
+      "severity": "high",
+      "source_quality": "official_check",
+      "source_url": "https://vrsws.sos.ky.gov/liveresults/?autorefresh=true",
+      "notes": "Official results page may exist, but reported votes are excluded in pre-election mode."
+    },
+    {
+      "conflict_id": "market_settlement_basis",
+      "signal_date": "2026-05-19",
+      "conflict_type": "market_resolution_basis",
+      "affected_dataset": "market_timeseries",
+      "severity": "low",
+      "source_quality": "market_metadata",
+      "source_url": "https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner",
+      "notes": "Polymarket resolves by official Republican-source consensus rather than directly from the state live-results page."
+    }
+  ],
+  "scenario_range": {
+    "massie_low": 0.27588761726076716,
+    "massie_high": 0.574944110301016,
+    "gallrein_low": 0.425055889698984,
+    "gallrein_high": 0.7241123827392328
+  },
+  "betting_decision_summary": {
+    "policy": "bounded_market_ensemble_with_no_bet_recommendation",
+    "decision": "no_unconditional_bet_recommendation",
+    "notes": "Markets are one capped forecast component; the wager table remains a conservative fair-odds comparison."
+  },
+  "source_freshness": [
+    {
+      "dataset_name": "polls",
+      "trust_tier": "high",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/",
+      "notes": "Core poll input for the KY-04 forecast.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "markets",
+      "trust_tier": "medium",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner",
+      "notes": "Bounded market forecast component and headline market comparison.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "market_timeseries",
+      "trust_tier": "medium",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://gamma-api.polymarket.com/events/slug/ky-04-republican-primary-winner",
+      "notes": "Orderbook data used for bounded market component and no-bet buffer.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "finance_ads",
+      "trust_tier": "medium",
+      "freshness_sla_days": 7,
+      "latest_source_date": "2026-05-18",
+      "days_stale": 1.0,
+      "freshness_pass": true,
+      "source_url": "https://linknky.com/elections/2026/05/18/massie-gallrein-gop-primary-becomes-most-expensive-in-u-s-history/",
+      "notes": "Capped contextual money signal.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "endorsements_events",
+      "trust_tier": "medium",
+      "freshness_sla_days": 3,
+      "latest_source_date": "2026-05-18",
+      "days_stale": 1.0,
+      "freshness_pass": true,
+      "source_url": "https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/",
+      "notes": "Capped contextual event signal.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "turnout_signals",
+      "trust_tier": "high",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://www.kychamber.com/vote",
+      "notes": "Closed-primary and turnout scenario evidence.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "pollster_ratings",
+      "trust_tier": "medium",
+      "freshness_sla_days": 30,
+      "latest_source_date": "",
+      "days_stale": NaN,
+      "freshness_pass": true,
+      "source_url": "https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/",
+      "notes": "Explicit pollster reliability multipliers for the polling average.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "source_checks",
+      "trust_tier": "high",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://vrsws.sos.ky.gov/liveresults/?autorefresh=true",
+      "notes": "Freshness and audit metadata.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "wager_settings",
+      "trust_tier": "high",
+      "freshness_sla_days": 365,
+      "latest_source_date": "",
+      "days_stale": NaN,
+      "freshness_pass": true,
+      "source_url": "local",
+      "notes": "Fair-odds comparison settings.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "poll_aggregators",
+      "trust_tier": "medium",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://www.publicsentimentinstitute.com/polling",
+      "notes": "Correlated polling anchor and deduplication evidence.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "turnout_history",
+      "trust_tier": "high",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://www.kychamber.com/vote",
+      "notes": "Turnout structure and uncertainty inputs.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "district_baselines",
+      "trust_tier": "medium",
+      "freshness_sla_days": 7,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "https://linknky.com/news/2026/05/13/gallrein-leads-massie-quantas-poll-ky4-gop-primary/",
+      "notes": "Fundamentals prior inputs.",
+      "last_updated": "2026-05-19"
+    },
+    {
+      "dataset_name": "source_conflicts",
+      "trust_tier": "high",
+      "freshness_sla_days": 1,
+      "latest_source_date": "2026-05-19",
+      "days_stale": 0.0,
+      "freshness_pass": true,
+      "source_url": "local",
+      "notes": "Explicit source conflict and double-counting guardrails.",
+      "last_updated": "2026-05-19"
+    }
+  ]
+}
